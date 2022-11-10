@@ -1,0 +1,4 @@
+com/vinay/flutter_toast_message/BuildConfig.java
+ com.vinay.flutter_toast_message.BuildConfig
+com/vinay/flutter_toast_message/FlutterToastMessagePlugin.java
+ com.vinay.flutter_toast_message.FlutterToastMessagePlugin
