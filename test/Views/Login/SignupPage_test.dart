@@ -39,7 +39,6 @@ void main() {
 
     });
 
-
     testWidgets('Sign up screen test with icon', (tester) async {
   
       await tester.pumpWidget(
@@ -56,6 +55,8 @@ void main() {
       expect(find.byIcon(Icons.vpn_key_rounded), findsNWidgets(2));
 
     });
+
+
 
 
   });
