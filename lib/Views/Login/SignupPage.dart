@@ -1,5 +1,7 @@
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 import '../../Widgets/CustomText.dart';
 import '../../Widgets/CustomButton.dart';
 
@@ -14,6 +16,18 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return (Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Color.fromARGB(255, 15, 11, 11),
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
+        actions: [SizedBox(width: 5)],
+      ),
       body: Form(
         key: _formKey,
         child: ListView(
