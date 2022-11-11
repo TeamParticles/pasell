@@ -26,7 +26,15 @@ class SignUpPage extends StatelessWidget {
           ),
           onPressed: () => Navigator.pop(context),
         ),
-        actions: [SizedBox(width: 5)],
+        actions: [
+          TextButton(
+            child:
+                CustomText(text: 'SignIn', fontSize: 18, color: Colors.white),
+            onPressed: () =>
+                Navigator.of(context).pushReplacementNamed('signInPage'),
+          ),
+          SizedBox(width: 5)
+        ],
       ),
       body: Form(
         key: _formKey,
