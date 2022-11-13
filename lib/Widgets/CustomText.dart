@@ -15,5 +15,10 @@ class CustomText extends StatelessWidget {
       this.textOverflow = TextOverflow.visible});
 
   @override
-  Widget build(BuildContext context) {}
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      overflow: textOverflow,
+    );
+  }
 }
