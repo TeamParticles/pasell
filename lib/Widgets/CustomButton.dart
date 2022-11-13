@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'CustomText.dart';
+
 class CustomButton extends StatelessWidget {
   final String text;
   final Color color;
@@ -27,6 +29,19 @@ class CustomButton extends StatelessWidget {
     return Container(
       height: 50,
       width: 130,
+      child: TextButton(
+        style: TextButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 25, 175, 202),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(borderRadius))),
+        child: CustomText(
+          text: text,
+          fontSize: fontSize,
+          color: textColor,
+          fontWeight: fontWeight,
+        ),
+        onPressed: onPressed,
+      ),
     );
   }
 }
