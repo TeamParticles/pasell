@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomText extends StatelessWidget {
   final String text;
@@ -16,9 +17,9 @@ class CustomText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      overflow: textOverflow,
-    );
+    return Text(text,
+        overflow: textOverflow,
+        style: GoogleFonts.getFont('Lato',
+            fontSize: fontSize, color: color, fontWeight: fontWeight));
   }
 }
