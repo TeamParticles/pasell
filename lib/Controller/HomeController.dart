@@ -21,23 +21,23 @@ class HomeController {
     return HomeCarousel.fromJson(jsonDecode(resp.body)).slider;
   }
 
-  // // Future<List<Category>> getListCategoriesProducts() async {
-  // //   final token = await authController.readToken();
-
-  // //   final resp = await http.get(Uri.parse('$server/list-categories'),
-  // //       headers: {'Accept': 'application/json', 'xx-token': token});
-
-  // //   return CategoriesProducts.fromJson(jsonDecode(resp.body)).categories;
-  // // }
-
-  // Future<List<Product>> getListProductsHome() async {
+  // Future<List<Category>> getListCategoriesProducts() async {
   //   final token = await authController.readToken();
 
-  //   final resp = await http.get(Uri.parse('$server/list-products-home'),
+  //   final resp = await http.get(Uri.parse('$server/list-categories'),
   //       headers: {'Accept': 'application/json', 'xx-token': token});
 
-  //   return ProductsHome.fromJson(jsonDecode(resp.body)).products;
+  //   return CategoriesProducts.fromJson(jsonDecode(resp.body)).categories;
   // }
+
+  Future<List<Product>> getListProductsHome() async {
+    final token = await authController.readToken();
+
+    final resp = await http.get(Uri.parse('$server/list-products-home'),
+        headers: {'Accept': 'application/json', 'xx-token': token});
+
+    return ProductsHome.fromJson(jsonDecode(resp.body)).products;
+  }
 
   Future<List<Category>> getListCategories() async {
     final token = await authController.readToken();
