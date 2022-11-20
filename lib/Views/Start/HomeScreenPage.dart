@@ -10,7 +10,48 @@ class HomeScreenPage extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 15.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [],
+            children: [
+              Expanded(
+                flex: 4,
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            child: Image.asset(
+                              'Assets/logoo.png',
+                              height: 100,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  child: ListView(
+                    physics: BouncingScrollPhysics(),
+                    children: [
+                      FloatingActionButton(
+                        child: Icon(Icons.arrow_forward_ios),
+                        backgroundColor: Color.fromARGB(211, 93, 79, 247),
+                        foregroundColor: Colors.white,
+                        onPressed: () => {
+                          Navigator.of(context).pushNamed('HomeScreenPageee')
+                        },
+                      ),
+                      SizedBox(height: 10.0),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
