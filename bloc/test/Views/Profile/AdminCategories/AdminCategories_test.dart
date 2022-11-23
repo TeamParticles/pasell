@@ -21,6 +21,18 @@ void main() {
       
       final title = find.text('Manage Categories');
       expect(title, findsOneWidget);
+      expect(find.byIcon(Icons.arrow_back_ios_new_rounded), findsOneWidget);
+
+      expect(find.text('All Categories'), findsOneWidget);
+      
+      final container = find.byType(Container);
+      expect(container, findsOneWidget);
+
+      
+      final addbtn = find.text('Add');
+      expect(addbtn, findsOneWidget);
+      await tester.tap(addbtn);
+
 
 
 
