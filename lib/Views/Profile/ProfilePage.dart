@@ -266,5 +266,114 @@ class _ListProfileState extends State<ListProfile> {
     );
   }
 
+  void changeProfile(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+      enableDrag: false,
+      builder: (context) {
+        return Container(
+            height: 190,
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(40)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 25.0, top: 25.0),
+                  child: CustomText(
+                      text: 'Update Profile Picture',
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500),
+                ),
+                SizedBox(height: 15.0),
+                Container(
+                  height: 50,
+                  width: MediaQuery.of(context).size.width,
+                  child: Card(
+                    elevation: 0,
+                    child: InkWell(
+                      onTap: () {
+                        getImage();
+                        Navigator.of(context).pop();
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 22.0),
+                        child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: CustomText(
+                                text: 'Choose Your Image', fontSize: 18)),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  height: 50,
+                  width: MediaQuery.of(context).size.width,
+                  child: Card(
+                    elevation: 0,
+                    child: InkWell(
+                      onTap: () {
+                        getTakeFoto();
+                        Navigator.pop(context);
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 22.0),
+                        child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: CustomText(
+                              text: 'Take a picture',
+                              fontSize: 18,
+                            )),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ));
+      },
+    );
   }
+}
 
+class _Divider extends StatelessWidget {
+  final Size size;
+
+  _Divider({
+    @required this.size,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 65.0, right: 25.0),
+      child: Container(
+        height: 1,
+        width: size.width,
+        color: Colors.grey[300],
+      ),
+    );
+  }
+}
+
+class CardProfile extends StatelessWidget {
+  final String text;
+  final Function onPressed;
+  final BorderRadius borderRadius;
+  final Color backgroundColor;
+  final IconData icon;
+
+  CardProfile(
+      {this.text,
+      this.onPressed,
+      this.borderRadius,
+      this.backgroundColor,
+      this.icon});
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
+    
+  }
+}
