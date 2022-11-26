@@ -150,5 +150,26 @@ class _ListProductsState extends State<_ListProducts> {
   }
 }
 
-
-  
+class _LoadingShimmerProducts extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 600.sm,
+      child: ListView.builder(
+          itemCount: 8,
+          itemBuilder: (context, index) {
+            return Container(
+              margin: EdgeInsets.all(10.sm),
+              height: 50.sm,
+              child: Shimmer.fromColors(
+                baseColor: Colors.white,
+                highlightColor: Color(0xFFF7F7F7),
+                child: Container(
+                  color: Colors.white,
+                ),
+              ),
+            );
+          }),
+    );
+  }
+}
