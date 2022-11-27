@@ -14,5 +14,14 @@ void main() {
     expect(arrowIconFinder, findsOneWidget);
   });
 
+   testWidgets("Testing for Product Categories Page", (tester) async {
+    await tester.pumpWidget(MaterialApp(
+      home: CategoriesPage(),
+    ));
+
+    final iconButton = find.byType(IconButton);
+    expect(iconButton, findsOneWidget);
+  });
+
   
 }
