@@ -42,51 +42,6 @@ void main() {
   });
 
 
-  test('Registering user when is successful', () async {
-    when(authController.createUsers(
-            user: userData["user"],
-            email: userData['email'],
-            password: userData['password']))
-        .thenAnswer(
-      (_) async => ResponseModels(
-        resp: true,
-        msj: "Registered Successfully",
-      ),
-    );
-    ResponseModels response = await authController.createUsers(
-        user: userData["user"],
-        email: userData['email'],
-        password: userData['password']);
-    verify(authController.createUsers(
-        user: userData["user"],
-        email: userData['email'],
-        password: userData['password']));
-    expect(response.msj, "Registered Successfully");
-    expect(response.resp, true);
-  });
-
-  test('Login user when is successful', () async {
-    when(authController.login(
-            email: userData['email'], password: userData['password']))
-        .thenAnswer(
-      (_) async => AuthModel(
-        resp: true,
-        msj: "Logged Successfully",
-        token: "token",
-        role: "User",
-        users: authUserData,
-      ),
-    );
-    AuthModel response = await authController.login(
-        email: userData['email'], password: userData['password']);
-    verify(authController.login(
-        email: userData['email'], password: userData['password']));
-    expect(response.msj, "Logged Successfully");
-    expect(response.resp, true);
-    expect(response.role, "User");
-    expect(response.token, "token");
-    expect(response.users, authUserData);
-  });
 
   test('profile should be updated successfully', () async{ 
      when(authController.updatedImageProfile(
@@ -111,7 +66,29 @@ void main() {
   });
 
 
- 
+   test('picture should be uploaded successfully', () async{ 
+     when(authController.uploadPicture(
+            picture:userData['picture'] ))
+        .thenAnswer(
+      (_) async => UploadPicture(
+        resp: false,
+        msj: "picture is not uploaded successfully",
+        picture: "profile.png",
+
+     ),
+    );
+    UploadPicture response = await authController.uploadPicture(
+        picture:userData['picture']);
+    verify(authController.uploadPicture(
+        picture:userData['picture'] ));
+    expect(response.msj, "picture is not uploaded successfully");
+    expect(response.resp, false);
+    expect(response.picture, "profile.png");
+   
+
+  });
+
+
   tearDownAll(() {
     authController = null;
   });
