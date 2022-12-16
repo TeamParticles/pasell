@@ -14,8 +14,24 @@ void main() {
     final title = find.text('Test');
     expect(title, findsOneWidget);
 
+    
+    final listView = find.byType(ListView);
+    expect(listView, findsOneWidget);
+
   
     
+  });
+
+   testWidgets('Testing if list View Shows items ...', (tester) async {
+    await tester.pumpWidget(MaterialApp(
+      home: CategoryProductsPage(category: "Test", uidCategory: ""),
+    ));
+
+    final listView = find.byType(ListView);
+    expect(listView, findsOneWidget);
+
+    final card = find.byType(Card);
+    expect(card, findsNothing);
   });
   
  
