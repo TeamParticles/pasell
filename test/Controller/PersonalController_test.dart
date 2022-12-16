@@ -71,6 +71,48 @@ void main() {
 
   });
 
+   test('personal information registration has been successfully passed ', () async {
+    when(personalController.registerPersonalInformation(
+            firstName: PersonalInformationData["firstName"],
+            lastName: PersonalInformationData['lastName'],
+            phone: PersonalInformationData['phone'],
+            address:PersonalInformationData['address'],
+            reference:PersonalInformationData['reference'],
+           
+            ))
+        .thenAnswer(
+      (_) async => ResponseModels(
+        resp: true,
+        msj: "personal information registration is added",
+      ),
+    );
+    ResponseModels response = await personalController.registerPersonalInformation(
+        firstName: PersonalInformationData["firstName"],
+        lastName: PersonalInformationData['lastName'],
+        phone: PersonalInformationData['phone'],    
+        address:PersonalInformationData['address'],
+        reference:PersonalInformationData['reference'],
+
+        );
+
+    verify(personalController.registerPersonalInformation(
+        firstName: PersonalInformationData["firstName"],
+        lastName: PersonalInformationData['lastName'],
+        phone: PersonalInformationData['phone'],
+        address:PersonalInformationData['address'],
+        reference:PersonalInformationData['reference'],
+
+        ));
+
+        expect(response.msj, "personal information registration is added");
+        expect(response.resp, true);
+   
+
+  });
+
+
+  
+
 
 
   tearDownAll(() {
