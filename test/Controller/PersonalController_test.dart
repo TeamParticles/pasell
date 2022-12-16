@@ -104,7 +104,8 @@ void main() {
 
         ));
 
-     
+        expect(response.msj, "personal information registration is added");
+        expect(response.resp, true);
    
 
   });
