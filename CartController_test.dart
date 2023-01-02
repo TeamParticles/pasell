@@ -5,13 +5,13 @@ import 'package:mockito/mockito.dart';
 import 'package:pasell/Models/Product/FavoriteCourse.dart';
 import 'CartController_test.mocks.dart';
 
-@GenerateMocks([CourseController])
+@GenerateMocks([ProductController])
 void main() {
-  CourseController courseController;
-  List<Favorite> listCourse;
+  ProductController productController;
+  List<Favorite> listProduct;
   setUpAll(() {
-    courseController = MockCartController();
-    listCourse = [
+    productController = MockCartController();
+    listProduct = [
       Favorite(id: "1"),
       Favorite(
         id: "2",
@@ -20,10 +20,10 @@ void main() {
   });
 
   test('Fetching list of cart', () async {
-    when(courseController.favoriteCourses())
-        .thenAnswer((realInvocation) async => listCourse);
+    when(productController.favoriteProducts())
+        .thenAnswer((realInvocation) async => listProduct);
 
-    List<Favorite> result = await courseController.favoriteCourses();
-    expect(result, listCourse);
+    List<Favorite> result = await producrController.favoriteProducts();
+    expect(result, listProduct);
   });
 }
