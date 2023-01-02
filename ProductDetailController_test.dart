@@ -1,17 +1,17 @@
-import 'package:pasell/Controller/CourseController.dart';
+import 'package:pasell/Controller/ProductController.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pasell/Models/Product/FavoriteCourse.dart';
 import 'ProductDetailController_test.mocks.dart';
 
-@GenerateMocks([CourseController])
+@GenerateMocks([ProductController])
 void main() {
-  CourseController courseController;
-  List<Favorite> listCourse;
+  ProductController productController;
+  List<Favorite> listProduct;
   setUpAll(() {
-    courseController = MockOrderController();
-    listCourse = [
+    productController = MockOrderController();
+    listProduct = [
       Favorite(id: "1"),
       Favorite(
         id: "2",
@@ -20,10 +20,10 @@ void main() {
   });
 
   test('Fetching the product detail', () async {
-    when(courseController.favoriteCourses())
-        .thenAnswer((realInvocation) async => listCourse);
+    when(productController.favoriteProducts())
+        .thenAnswer((realInvocation) async => listProduct);
 
-    List<Favorite> result = await courseController.favoriteCourses();
-    expect(result, listCourse);
+    List<Favorite> result = await productController.favoriteProducts();
+    expect(result, listProduct);
   });
 }
