@@ -1,24 +1,24 @@
-import 'package:pasell/Controller/CourseController.dart';
+import 'package:pasell/Controller/ProductController.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:pasell/Models/Response/PurchasedCoursesResponse.dart';
+import 'package:pasell/Models/Response/PurchasedProductsResponse.dart';
 import 'OrderController_test.mocks.dart';
 
 @GenerateMocks([CourseController])
 void main() {
-  CourseController courseController;
+  ProductController productController;
   // List<Favorite> listCourse;
   setUpAll(() {
-    courseController = MockOrderController();
+    productController = MockOrderController();
   });
 
   test('Fetching order list', () async {
-    when(courseController.getPurchasedCourses())
+    when(productController.getPurchasedProducts())
         .thenAnswer((realInvocation) async => await null);
 
-    Future<PurchasedCoursesResponse> result = (await courseController
-        .getPurchasedCourses()) as Future<PurchasedCoursesResponse>;
+    Future<PurchasedProductsResponse> result = (await productController
+        .getPurchasedProducts()) as Future<PurchasedProductsResponse>;
     expect(result, null);
   });
 }
