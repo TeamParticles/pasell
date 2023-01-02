@@ -2,7 +2,7 @@ import 'package:pasell/Controller/ProductController.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:pasell/Models/Product/FavoriteCourse.dart';
+import 'package:pasell/Models/Product/FavoriteProduct.dart';
 import 'ProductDetailController_test.mocks.dart';
 
 @GenerateMocks([ProductController])
