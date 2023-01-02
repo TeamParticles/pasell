@@ -1,2 +1,0 @@
-dev/jeremyko/proximity_sensor/BuildConfig.java
- dev.jeremyko.proximity_sensor.BuildConfig
