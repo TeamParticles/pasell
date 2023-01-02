@@ -1,4 +1,4 @@
-import 'package:pasell/Controller/CourseController.dart';
+import 'package:pasell/Controller/ProductController.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
