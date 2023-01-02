@@ -4,7 +4,7 @@
 
 // @dart=2.9
 
-import 'package:pasell/Controller/CourseController.dart' as _i2;
+import 'package:pasell/Controller/ProductController.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -17,10 +17,10 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 
-/// A class which mocks [CourseController].
+/// A class which mocks [ProductController].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockCartController extends _i1.Mock implements _i2.CourseController {
+class MockCartController extends _i1.Mock implements _i2.ProductController {
   MockCartController() {
     _i1.throwOnMissingStub(this);
   }
