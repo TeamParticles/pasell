@@ -94,7 +94,7 @@ const ListCategoriesAll = async (req, res = response) => {
 
             res.json({
                 resp: true,
-                msj: 'List Categories All',
+                msj: 'List Categories Alllll',
                 categories: listCategories
             });
 
