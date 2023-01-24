@@ -39,6 +39,6 @@ Some Screengrab of our project wrok done Team_Particles.
   <img width= "200" height="400" src="./src/Uploads/Images/x.jpg">
   <img width= "200" height="400" src="./src/Uploads/Images/y.jpg">
   <img width= "200" height="400" src="./src/Uploads/Images/u.jpg">
-  <img width= "200" height="400" src="./src/Uploads/Images/payment.jpg">
+  <img width= "200" height="400" src="./src/Uploads/Images/payment.png">
 </p>
 
