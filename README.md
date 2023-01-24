@@ -29,7 +29,7 @@ Some Screengrab of our project wrok done Team_Particles.
 # ScreenShots
 <p align="center">
   <img width= "200" height="400" src="./src/Uploads/Images/b.jpg">
-  <img width= "200" height="400" src="./src/Uploads/Images/r.jpg">
+  <img width= "200" height="400" src="./src/Uploads/Images/i.jpg">
   <img width= "200" height="400" src="./src/Uploads/Images/u.jpg">
   <img width= "200" height="400" src="./src/Uploads/Images/w.jpg">
 </p>
