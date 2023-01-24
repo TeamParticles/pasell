@@ -1,7 +1,7 @@
 # pasell
 # ScreenShots
 <p align="center">
-  <img width= "200" height="400" src="./images/Uploads/Images/a.jpg">
+  <img width= "200" height="400" src="./src/images/Uploads/Images/a.jpg">
   <img width= "200" height="400" src="./images/googlemapp.jpg">
 </p>
 
